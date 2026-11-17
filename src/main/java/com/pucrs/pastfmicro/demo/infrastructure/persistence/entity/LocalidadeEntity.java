@@ -1,6 +1,7 @@
 package com.pucrs.pastfmicro.demo.infrastructure.persistence.entity;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.Column;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.Id;
@@ -23,8 +24,10 @@ public class LocalidadeEntity {
 
     private String nome;
 
+    @Column(name = "quantidade_eleitores")
     private long qtdEleitores;
 
     @Enumerated(EnumType.STRING)
+    @Column(name = "tipo_localidade")
     private TipoLocalidadeEntity tipo;
 }
